@@ -1,0 +1,74 @@
+RewriteEngine On
+Options -Indexes
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+#TrangChu
+RewriteRule ^home$ /pages/dashboard.php [L]
+
+RewriteRule ^auth/login$ /auth/login.php [L]
+RewriteRule ^auth/register$ /auth/register.php [L]
+RewriteRule ^auth/update-info$ /auth/update-info.php [L]
+
+RewriteRule ^user/profile$ /user/profile.php [L]
+RewriteRule ^user/history$ /user/history.php [L]
+RewriteRule ^user/logout$ /user/logout.php [L]
+
+RewriteRule ^recharge/banking$ /recharge/banking.php [L]
+RewriteRule ^recharge/card$ /recharg/card.php [L]
+RewriteRule ^sitecon/sitecon /sitecon/sitecon.php [L]
+RewriteRule ^tools/lay2fa$ /tools/lay2fa.php [L]
+RewriteRule ^tools/getid$ /tools/getid.php [L]
+RewriteRule ^modun/recharge/callback_momo$ /modun/recharge/callback_momo.php [L]
+
+
+RewriteRule ^administrator/user/edit/id-([a-zA-Z0-9_-]+)$ /administrator/user/edit.php?user_id=$1 [L]
+RewriteRule ^administrator/user/service/id-([a-zA-Z0-9_-]+)$ /administrator/service/edit.php?service_id=$1 [L]
+RewriteRule ^administrator/user/list$ /administrator/user/list.php [L]
+RewriteRule ^administrator/user/edit-point$ /administrator/user/edit-point.php [L]
+RewriteRule ^administrator/service/list$ /administrator/service/list.php [L]
+RewriteRule ^administrator/service/create$ /administrator/service/create.php [L]
+RewriteRule ^administrator/noti/create$ /administrator/noti/create.php [L]
+RewriteRule ^administrator/noti/list$ /administrator/noti/list.php [L]
+RewriteRule ^administrator/system/config$ /administrator/system/config.php [L]
+RewriteRule ^administrator/recharge/banking/list$ /administrator/recharge/banking/list.php [L]
+RewriteRule ^administrator/recharge/card/list$ /administrator/recharge/card/list.php [L]
+RewriteRule ^administrator/service/facebook/list$ /administrator/service/facebook/list.php [L]
+RewriteRule ^administrator/service/facebook/like-post-sale/list$ /administrator/service/facebook/like-post-sale/list.php [L]
+RewriteRule ^administrator/service/facebook/like-post/list$ /administrator/service/facebook/like-post/list.php [L]
+RewriteRule ^administrator/service/facebook/comment/list$ /administrator/service/facebook/comment/list.php [L]
+RewriteRule ^administrator/service/facebook/follow-sale/list$ /administrator/service/facebook/follow-sale/list.php [L]
+RewriteRule ^administrator/service/facebook/follow/list$ /administrator/service/facebook/follow/list.php [L]
+RewriteRule ^administrator/service/facebook/like-page-sale/list$ /administrator/service/facebook/like-page-sale/list.php [L]
+RewriteRule ^administrator/service/facebook/like-page/list$ /administrator/service/facebook/like-page/list.php [L]
+RewriteRule ^administrator/service/facebook/eye-live/list$ /administrator/service/facebook/eye-live/list.php [L]
+
+
+RewriteRule ^service/facebook/like-post/order$ /service/facebook/like-post/order.php [L]
+RewriteRule ^service/facebook/like-post/list$ /service/facebook/like-post/list.php [L]
+
+RewriteRule ^service/facebook/like-post-sale/order$ /service/facebook/like-post-sale/order.php [L]
+RewriteRule ^service/facebook/like-post-sale/list$ /service/facebook/like-post-sale/list.php [L]
+
+RewriteRule ^service/facebook/comment/order$ /service/facebook/comment/order.php [L]
+RewriteRule ^service/facebook/comment/list$ /service/facebook/comment/list.php [L]
+
+RewriteRule ^service/facebook/follow/order$ /service/facebook/follow/order.php [L]
+RewriteRule ^service/facebook/follow/list$ /service/facebook/follow/list.php [L]
+
+RewriteRule ^service/facebook/follow-sale/order$ /service/facebook/follow-sale/order.php [L]
+RewriteRule ^service/facebook/follow-sale/list$ /service/facebook/follow-sale/list.php [L]
+
+RewriteRule ^service/facebook/like-page/order$ /service/facebook/like-page/order.php [L]
+RewriteRule ^service/facebook/like-page/list$ /service/facebook/like-page/list.php [L]
+
+RewriteRule ^service/facebook/like-page-sale/order$ /service/facebook/like-page-sale/order.php [L]
+RewriteRule ^service/facebook/like-page-sale/list$ /service/facebook/like-page-sale/list.php [L]
+
+RewriteRule ^service/facebook/eye-live/order$ /service/facebook/eye-live/order.php [L]
+RewriteRule ^service/facebook/eye-live/list$ /service/facebook/eye-live/list.php [L]
+
+RewriteRule ^service/tiktok/view-video/order$ /service/tiktok/view-video/order.php [L]
+RewriteRule ^service/tiktok/view-video/list$ /service/tiktok/view-video/list.php [L]
+
+RewriteRule ^404$ /pages/error/404.php [L]
+RewriteRule ^404$ /pages/error/500.php [L]
